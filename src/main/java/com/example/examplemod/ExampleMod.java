@@ -1,5 +1,6 @@
 package com.example.examplemod;
 
+import org.apache.sshd.common.NamedResource;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -97,6 +98,7 @@ public class ExampleMod
     {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
+        LOGGER.info(NamedResource.class.getTypeName());
 
         if (Config.logDirtBlock)
             LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
